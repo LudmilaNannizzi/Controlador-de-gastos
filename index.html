@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--FONTAWESOME-->
+<script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
+<!--BULMA-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body class="has-background-light" style="overflow: hidden;">
+    <!-- INICIO NAV BAR -->
+    <nav class="navbar is-primary is-spaced has-shadow" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+              <h1 class="title has-text-white">
+                <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
+                  Controlador de gastos</h1>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                    <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
+                  Balance
+                </a>
+                <a class="button is-primary">
+                    <i class="fas fa-tag mr-2" aria-hidden="true"></i>
+                  Categorías
+                </a>
+                <a class="button is-primary">
+                    <i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>
+                  Reportes
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- FIN NAV BAR -->
+
+      <!-- INICIO BALANCE SECTION -->
+      <div class="tile is-ancestor column is-flex is-justify-content-center m-6 ">
+        <div class="tile is-3 is-vertical is-parent">
+          <div class="tile is-child box ">
+            <p class="title has-text-weight-bold">Balance</p>
+            <div>
+                <div class="columns">
+                    <div class="column is-size-5">Ganancias</div>
+                    <div
+                      class="column has-text-right has-text-success"
+                    >
+                      +$0
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column is-size-5">Gastos</div>
+                    <div
+                      class="column has-text-right has-text-danger"
+                    >
+                      +$0
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column is-size-5">Total</div>
+                    <div
+                      class="column has-text-right has-text-weight-bold	"
+                    >
+                      $0
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="tile is-child box ">
+            <p class="title has-text-weight-bold">Filtros</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+          </div>
+        </div>
+        <div class="tile is-6 is-parent ">
+          <div class="tile is-child box">
+            <p class="title has-text-weight-bold is-flex is-justify-content-space-between">Operaciones
+                <a class="button is-primary">
+                    + Nueva operación
+                </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
