@@ -9,15 +9,25 @@
 <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
 <!--BULMA-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<style>
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+  
+
+</style>
 </head>
-<body class="has-background-light" style="overflow: hidden;">
+<body style="border: 2px solid red;">
+
     <!-- INICIO NAV BAR -->
-    <nav class="navbar is-primary is-spaced has-shadow" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation" >
         <div class="navbar-brand">
           <a class="navbar-item">
               <h1 class="title has-text-white">
                 <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
-                  Controlador de gastos</h1>
+                  Ahorrador</h1>
           </a>
       
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -50,54 +60,244 @@
         </div>
       </nav>
       <!-- FIN NAV BAR -->
+      <!--<section>
+        <div class="container m-6 is-vcentered " style="border: solid 1px red;">
+          <div class="columns">
+            <div class="column is-4 is-vertical is-parent">
+              <div class="column is-child box p-5" style="border: solid 1px red;">
+                <p class="title">Balance</p>
+                <div class="columns is-mobile is-vcentered">
+                  <div class="column is-size-5">Ganancias</div>
+                  <div class="column has-text-right has-text-success">+$0</div>
+                </div>
+                <div class="columns is-mobile is-vcentered">
+                  <div class="column is-size-5">Gastos</div>
+                  <div class="column has-text-right has-text-danger">-$0</div>
+                </div>
+                <div class="columns is-mobile is-vcentered">
+                  <div class="column is-size-5">Total</div>
+                  <div class="column has-text-right has-text-success">$0</div>
+                </div>
+              </div>
 
-      <!-- INICIO BALANCE SECTION -->
-      <div class="tile is-ancestor column is-flex is-justify-content-center m-6 ">
-        <div class="tile is-3 is-vertical is-parent">
-          <div class="tile is-child box ">
-            <p class="title has-text-weight-bold">Balance</p>
-            <div>
-                <div class="columns">
-                    <div class="column is-size-5">Ganancias</div>
-                    <div
-                      class="column has-text-right has-text-success"
-                    >
-                      +$0
-                    </div>
-                  </div>
-                  <div class="columns">
-                    <div class="column is-size-5">Gastos</div>
-                    <div
-                      class="column has-text-right has-text-danger"
-                    >
-                      +$0
-                    </div>
-                  </div>
-                  <div class="columns">
-                    <div class="column is-size-5">Total</div>
-                    <div
-                      class="column has-text-right has-text-weight-bold	"
-                    >
-                      $0
-                    </div>
-                  </div>
+
+              <div class="column is-child box p-5">
+                <p class="title">Filtros</p>
+                <p class="subtitle"></p>
+                
+              </div>
+            </div>
+            <div class="column is-parent">
+              <div class="column is-child box p-5">
+                <p class="title">Operaciones</p>
+                
+              </div>
             </div>
           </div>
-          <div class="tile is-child box ">
-            <p class="title has-text-weight-bold">Filtros</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+      </section>-->
+      <div class="tile is-ancestor m-6 is-mobile">
+        <div class="tile is-4 is-vertical is-parent" style="border: solid 1px red;">
+
+
+          <!-- ################# BALANCE ###############-->
+          <div class="tile is-child box" style="border: solid 1px red;">
+            <p class="title">Balance</p>
+            <div class="columns is-mobile is-vcentered">
+              <div class="column is-size-5">Ganancias</div>
+              <div class="column has-text-right has-text-success">+$0</div>
+            </div>
+            <div class="columns is-mobile is-vcentered">
+              <div class="column is-size-5">Gastos</div>
+              <div class="column has-text-right has-text-danger">-$0</div>
+            </div>
+            <div class="columns is-mobile is-vcentered">
+              <div class="column is-size-5">Total</div>
+              <div class="column has-text-right has-text-success">$0</div>
+            </div>
+          </div>
+
+
+          <!-- ################# FILTROS ###############-->
+
+
+          <div class="tile is-child box" style="border: solid 1px red; ">
+            <div class="columns m-3">
+              <p class="title">Filtros</p>
+              <a class="column has-text-right">Ocultar filtros</a>
+            </div>
+            <div class="m-3" style="border: solid 1px red;">
+            <p class="title is-size-5">Tipo</p>
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                  <span>Todos</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Gasto
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Ganancia
+                  </a>
+                 </div>
+                
+                
+                
+                 
+                 </div>
+                </div>
+                
+            </div>
+            <div class="m-3" style="border: solid 1px red;">
+              <p class="title is-size-5">Categoría</p>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                    <span>Todos</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Gasto
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Ganancia
+                    </a>
+                   </div>
+                  
+                  
+                  
+                   
+                   </div>
+                  </div>
+                  
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="m-3" style="border: solid 1px red;">
+                <p class="title is-size-5">Tipo</p>
+                <div class="dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                      <span>Click me</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Overview
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Modifiers
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Grid
+                      </a>
+                     </div>
+                    
+                    
+                    
+                     
+                     </div>
+                    </div>
+                    
+                </div>
+            
           </div>
         </div>
-        <div class="tile is-6 is-parent ">
-          <div class="tile is-child box">
-            <p class="title has-text-weight-bold is-flex is-justify-content-space-between">Operaciones
-                <a class="button is-primary">
-                    + Nueva operación
-                </a>
-            </p>
+
+        <!-- ################# OPERACIONES ###############-->
+        <div class="tile is-parent is-mobile" >
+          <div class="tile is-child box is-flex is-flex-direction-column style="border: 1px solid red;"	" >
+            <span class="title">Operaciones
+            <a class="button is-primary is-pulled-right	">
+            +Nueva operación
+            </a></span>
+            <figure class="image is-250x250">
+              <img src="./money.svg">
+            </figure>
+            
+
+            
           </div>
         </div>
       </div>
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 </body>
 </html>
