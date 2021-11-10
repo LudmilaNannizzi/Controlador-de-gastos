@@ -1,303 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--FONTAWESOME-->
-<script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
-<!--BULMA-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-<style>
-  * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-  
-
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--FONTAWESOME-->
+  <script src="https://kit.fontawesome.com/78a221b1ef.js" crossorigin="anonymous"></script>
+  <!--BULMA-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
-<body style="border: 2px solid red;">
 
-    <!-- INICIO NAV BAR -->
-    <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation" >
-        <div class="navbar-brand">
-          <a class="navbar-item">
-              <h1 class="title has-text-white">
-                <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
-                  Ahorrador</h1>
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                    <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
-                  Balance
-                </a>
-                <a class="button is-primary">
-                    <i class="fas fa-tag mr-2" aria-hidden="true"></i>
-                  Categorías
-                </a>
-                <a class="button is-primary">
-                    <i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>
-                  Reportes
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- FIN NAV BAR -->
-      <!--<section>
-        <div class="container m-6 is-vcentered " style="border: solid 1px red;">
-          <div class="columns">
-            <div class="column is-4 is-vertical is-parent">
-              <div class="column is-child box p-5" style="border: solid 1px red;">
-                <p class="title">Balance</p>
-                <div class="columns is-mobile is-vcentered">
-                  <div class="column is-size-5">Ganancias</div>
-                  <div class="column has-text-right has-text-success">+$0</div>
-                </div>
-                <div class="columns is-mobile is-vcentered">
-                  <div class="column is-size-5">Gastos</div>
-                  <div class="column has-text-right has-text-danger">-$0</div>
-                </div>
-                <div class="columns is-mobile is-vcentered">
-                  <div class="column is-size-5">Total</div>
-                  <div class="column has-text-right has-text-success">$0</div>
-                </div>
-              </div>
+<body class="has-background-primary-light		">
 
+  <!-- INICIO NAV BAR -->
+  <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <h1 class="title has-text-white">
+          <i class="fas fa-wallet mr-2" aria-hidden="true"></i>
+          Ahorrador
+        </h1>
+      </a>
 
-              <div class="column is-child box p-5">
-                <p class="title">Filtros</p>
-                <p class="subtitle"></p>
-                
-              </div>
-            </div>
-            <div class="column is-parent">
-              <div class="column is-child box p-5">
-                <p class="title">Operaciones</p>
-                
-              </div>
-            </div>
-          </div>
-      </section>-->
-      <div class="tile is-ancestor m-6 is-mobile">
-        <div class="tile is-4 is-vertical is-parent" style="border: solid 1px red;">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
+    <div id="navbarBasicExample" class="navbar-menu">
 
-          <!-- ################# BALANCE ###############-->
-          <div class="tile is-child box" style="border: solid 1px red;">
-            <p class="title">Balance</p>
-            <div class="columns is-mobile is-vcentered">
-              <div class="column is-size-5">Ganancias</div>
-              <div class="column has-text-right has-text-success">+$0</div>
-            </div>
-            <div class="columns is-mobile is-vcentered">
-              <div class="column is-size-5">Gastos</div>
-              <div class="column has-text-right has-text-danger">-$0</div>
-            </div>
-            <div class="columns is-mobile is-vcentered">
-              <div class="column is-size-5">Total</div>
-              <div class="column has-text-right has-text-success">$0</div>
-            </div>
-          </div>
-
-
-          <!-- ################# FILTROS ###############-->
-
-
-          <div class="tile is-child box" style="border: solid 1px red; ">
-            <div class="columns m-3">
-              <p class="title">Filtros</p>
-              <a class="column has-text-right">Ocultar filtros</a>
-            </div>
-            <div class="m-3" style="border: solid 1px red;">
-            <p class="title is-size-5">Tipo</p>
-            <div class="dropdown">
-              <div class="dropdown-trigger">
-                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <span>Todos</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                  <a href="#" class="dropdown-item">
-                    Gasto
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Ganancia
-                  </a>
-                 </div>
-                
-                
-                
-                 
-                 </div>
-                </div>
-                
-            </div>
-            <div class="m-3" style="border: solid 1px red;">
-              <p class="title is-size-5">Categoría</p>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>Todos</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                  <div class="dropdown-content">
-                    <a href="#" class="dropdown-item">
-                      Gasto
-                    </a>
-                    <a href="#" class="dropdown-item">
-                      Ganancia
-                    </a>
-                   </div>
-                  
-                  
-                  
-                   
-                   </div>
-                  </div>
-                  
-              </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div class="m-3" style="border: solid 1px red;">
-                <p class="title is-size-5">Tipo</p>
-                <div class="dropdown">
-                  <div class="dropdown-trigger">
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                      <span>Click me</span>
-                      <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                    <div class="dropdown-content">
-                      <a href="#" class="dropdown-item">
-                        Overview
-                      </a>
-                      <a href="#" class="dropdown-item">
-                        Modifiers
-                      </a>
-                      <a href="#" class="dropdown-item">
-                        Grid
-                      </a>
-                     </div>
-                    
-                    
-                    
-                     
-                     </div>
-                    </div>
-                    
-                </div>
-            
-          </div>
-        </div>
-
-        <!-- ################# OPERACIONES ###############-->
-        <div class="tile is-parent is-mobile" >
-          <div class="tile is-child box is-flex is-flex-direction-column style="border: 1px solid red;"	" >
-            <span class="title">Operaciones
-            <a class="button is-primary is-pulled-right	">
-            +Nueva operación
-            </a></span>
-            <figure class="image is-250x250">
-              <img src="./money.svg">
-            </figure>
-            
-
-            
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
+              Balance
+            </a>
+            <a class="button is-primary">
+              <i class="fas fa-tag mr-2" aria-hidden="true"></i>
+              Categorías
+            </a>
+            <a class="button is-primary">
+              <i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>
+              Reportes
+            </a>
           </div>
         </div>
       </div>
+    </div>
+  </nav>
+  <!-- FIN NAV BAR -->
+
+  <!-- ################# SECCIÓN BALANCE ###############-->
+  <div class="contenedor-balance tile is-ancestor m-6 is-mobile" >
+
+    <!--contenedor balance y filtros-->
+    <div class="tile is-4 is-vertical is-parent is-offset-1">
+      <!--### BALANCE ###-->
+      <div class="tile is-child box">
+        <p class="title">Balance</p>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column is-size-5">Ganancias</div>
+          <div class="column has-text-right has-text-success">+$0</div>
+        </div>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column is-size-5">Gastos</div>
+          <div class="column has-text-right has-text-danger">-$0</div>
+        </div>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column is-size-5">Total</div>
+          <div class="column has-text-right has-text-success">$0</div>
+        </div>
+      </div>
+      <!--### FILTROS ###-->
+      <div class="tile is-child box">
+        <div class="columns m-3">
+          <p class="title">Filtros</p>
+          <a class="column has-text-right">Ocultar filtros</a>
+        </div>
+        <div class="m-3">
+          <label class="label">Tipo</label>
+          <div class="select is-normal is-fullwidth">
+            <select>
+              <option>Todos</option>
+              <option>Gasto</option>
+              <option>Ganancia</option>
+            </select>
+          </div>
+        </div>
+        <div class="m-3">
+          <label class="label">Categoría</label>
+          <div class="select is-normal is-fullwidth">
+            <select>
+              <option value="">Todas</option>
+              <option value="">Comida</option>
+              <option value="">Servicios</option>
+              <option value="">Salidas</option>
+              <option value="">Educación</option>
+              <option value="">Transporte</option>
+              <option value="">Trabajo</option>
+            </select>
+          </div>
+        </div>
+        <div class="m-3">
+          <label for="" class="label">Desde</label>
+          <input type="date" class="input">
+        </div>
+        <div class="m-3">
+          <label for="" class="label">Ordenar por</label>
+          <div class="select is-normal is-fullwidth">
+            <select>
+              <option value="">Más reciente</option>
+              <option value="">Menos reciente</option>
+              <option value="">Mayor monto</option>
+              <option value="">Menor monto</option>
+              <option value="">A/Z</option>
+              <option value="">Z/A</option>
+            </select>
+          </div>
+        </div>
 
 
+      </div>
+
+
+    </div>
+    <!--fin contenedor balance y filtros-->
+  
+
+  <!--### OPERACIONES ###-->
+  <div class="tile is-parent is-mobile">
+    <div class="tile is-child box is-flex is-flex-direction-column style=">
+      <span class="title">Operaciones
+        <a class="button is-primary is-pulled-right	">
+          +Nueva operación
+        </a>
+      </span>
+
+
+
+      <span class="subtitle is-size-4 has-text-centered mt-6 mb-4 has-text-weight-semibold">
+        Sin resultados
+      </span>
+      <p class="has-text-centered">Cambia los filtros o agrega operaciones</p>
       
-      
+    </div>
+  </div>
+  </div> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
+
 </html>
