@@ -19,9 +19,10 @@
   </style>
 </head>
 
-<body class="has-background-primary-light		">
+<body class="has-background-link-light" style="overflow: hidden;">
 
-  <!-- INICIO NAV BAR -->
+  <!-- ################# NAV BAR ############### -->
+
   <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item">
@@ -30,16 +31,13 @@
           Ahorrador
         </h1>
       </a>
-
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-
     <div id="navbarBasicExample" class="navbar-menu">
-
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
@@ -62,14 +60,14 @@
   </nav>
   <!-- FIN NAV BAR -->
 
-  <!-- ################# SECCIÓN BALANCE ###############-->
-  <div class="contenedor-balance tile is-ancestor m-6 is-mobile" >
+  <!-- ################# SECCIÓN BALANCE ############### -->
 
+  <section class="tile is-ancestor m-6 is-mobile" id="section-balance">
     <!--contenedor balance y filtros-->
     <div class="tile is-4 is-vertical is-parent is-offset-1">
-      <!--### BALANCE ###-->
+      <!--### Balance ###-->
       <div class="tile is-child box">
-        <p class="title">Balance</p>
+        <p class="title has-text-weight-bold">Balance</p>
         <div class="columns is-mobile is-vcentered">
           <div class="column is-size-5">Ganancias</div>
           <div class="column has-text-right has-text-success">+$0</div>
@@ -83,10 +81,10 @@
           <div class="column has-text-right has-text-success">$0</div>
         </div>
       </div>
-      <!--### FILTROS ###-->
+      <!--### Filtros ###-->
       <div class="tile is-child box">
         <div class="columns m-3">
-          <p class="title">Filtros</p>
+          <p class="title is-size-4 has-text-weight-bold">Filtros</p>
           <a class="column has-text-right">Ocultar filtros</a>
         </div>
         <div class="m-3">
@@ -130,39 +128,108 @@
             </select>
           </div>
         </div>
-
-
       </div>
-
-
     </div>
-    <!--fin contenedor balance y filtros-->
-  
+    <!--Fin contenedor balance y filtros-->
+    <!--### Operaciones ###-->
+    <div class="tile is-parent is-mobile">
+      <div class="tile is-child box is-flex is-flex-direction-column">
+        <span class="title has-text-weight-bold	is-size-4">Operaciones
+          <a class="button is-primary is-pulled-right	has-text-weight-normal	">
+            +Nueva operación
+          </a>
+        </span>
+        <figure class="image is-3by1">
+          <img src="./1904634781578289028.svg" alt="">
+        </figure>
+        <span class="subtitle is-size-4 has-text-centered mt-6 mb-4 has-text-weight-semibold">
+          Sin resultados
+        </span>
+        <p class="has-text-centered">Cambia los filtros o agrega operaciones</p>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN BALANCE -->
 
-  <!--### OPERACIONES ###-->
-  <div class="tile is-parent is-mobile">
-    <div class="tile is-child box is-flex is-flex-direction-column style=">
-      <span class="title">Operaciones
-        <a class="button is-primary is-pulled-right	">
-          +Nueva operación
-        </a>
-      </span>
+  <!-- ################# SECCIÓN CATEGORÍAS ############### -->
+  <section class="tile is-parent is-mobile m-6">
+    <div class="tile is-child box">
+      <p class="title has-text-weight-bold	is-size-4">Categorías</p>
+      <label class="label">Nombre</label>
+      <div class="field is-grouped">
+        <div class="control is-expanded">
+          <input class="input" type="text" name="">
+        </div>
+        <div class="control">
+          <button class="button is-primary">Agregar</button>
+        </div>
+      </div>
+      <div class=" is-flex is-flex-direction-column  ">
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Comida</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Servicios</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Salidas</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Educación</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Transporte</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+        <div class="m-2 is-flex is-row is-justify-content-space-between">
+          <span class="tag is-primary is-light">Trabajo</span>
+          <div class="is-pulled-right">
+            <a href="" class="is-size-7">Editar</a>
+            <a href="" class="ml-4 is-size-7">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIN SECCIÓN BALANCE -->
 
-
-
-      
+  <!-- ################# SECCIÓN REPORTES ############### -->
+  <section class="m-6 tile is-parent is-mobile">
+    <div class="tile is-child box is-flex is-flex-direction-column">
+      <span class="title has-text-weight-bold	is-size-4">Reportes</span>
       <figure class="image is-3by1">
-        <img  src="./1904634781578289028.svg" alt="">
+        <img src="./1904634781578289028.svg" alt="">
       </figure>
       <span class="subtitle is-size-4 has-text-centered mt-6 mb-4 has-text-weight-semibold">
-        Sin resultados
+        Operaciones insuficientes
       </span>
-      <p class="has-text-centered">Cambia los filtros o agrega operaciones</p>
-
-      
+      <p class="has-text-centered">Prueba agregando más operaciones</p>
     </div>
-  </div>
-  </div> 
+  </section>
+
+
+
+
+
 
 </body>
 
