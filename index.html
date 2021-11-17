@@ -16,6 +16,14 @@
       padding: 0%;
       box-sizing: border-box;
     }
+
+    .ocultar {
+      display: none;
+    }
+    .mostrar {
+      display: block;
+    }
+
   </style>
 </head>
 
@@ -42,15 +50,15 @@
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-primary">
-              <i class="fas fa-chart-line mr-2" aria-hidden="true"></i>
+              <i class="fas fa-chart-line mr-2" aria-hidden="true" id="balance-btn"></i>
               Balance
             </a>
             <a class="button is-primary">
-              <i class="fas fa-tag mr-2" aria-hidden="true"></i>
+              <i class="fas fa-tag mr-2" aria-hidden="true" id="categorias-btn"></i>
               Categorías
             </a>
             <a class="button is-primary">
-              <i class="fas fa-chart-pie mr-2" aria-hidden="true"></i>
+              <i class="fas fa-chart-pie mr-2" aria-hidden="true" id="reportes-btn"></i>
               Reportes
             </a>
           </div>
@@ -62,7 +70,7 @@
 
   <!-- ################# SECCIÓN BALANCE ############### -->
 
-  <section class="tile is-ancestor m-6 is-mobile" id="section-balance">
+  <section class="tile is-ancestor m-6 is-mobile" id="balance-seccion">
     <!--contenedor balance y filtros-->
     <div class="tile is-4 is-vertical is-parent is-offset-1">
       <!--### Balance ###-->
@@ -82,50 +90,52 @@
         </div>
       </div>
       <!--### Filtros ###-->
-      <div class="tile is-child box">
+      <div class="tile is-child box" style="border: aqua 1px solid;">
         <div class="columns m-3">
           <p class="title is-size-4 has-text-weight-bold">Filtros</p>
-          <a class="column has-text-right">Ocultar filtros</a>
+          <a class="column has-text-right" id="filter-text">Ocultar filtros</a>
         </div>
-        <div class="m-3">
-          <label class="label">Tipo</label>
-          <div class="select is-normal is-fullwidth">
-            <select>
-              <option>Todos</option>
-              <option>Gasto</option>
-              <option>Ganancia</option>
-            </select>
+        <div class="ocultar" id="caja-filtros" style="border: solid red 1px;">
+          <div class="m-3">
+            <label class="label">Tipo</label>
+            <div class="select is-normal is-fullwidth">
+              <select>
+                <option>Todos</option>
+                <option>Gasto</option>
+                <option>Ganancia</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="m-3">
-          <label class="label">Categoría</label>
-          <div class="select is-normal is-fullwidth">
-            <select>
-              <option value="">Todas</option>
-              <option value="">Comida</option>
-              <option value="">Servicios</option>
-              <option value="">Salidas</option>
-              <option value="">Educación</option>
-              <option value="">Transporte</option>
-              <option value="">Trabajo</option>
-            </select>
+          <div class="m-3">
+            <label class="label">Categoría</label>
+            <div class="select is-normal is-fullwidth">
+              <select>
+                <option value="">Todas</option>
+                <option value="">Comida</option>
+                <option value="">Servicios</option>
+                <option value="">Salidas</option>
+                <option value="">Educación</option>
+                <option value="">Transporte</option>
+                <option value="">Trabajo</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="m-3">
-          <label for="" class="label">Desde</label>
-          <input type="date" class="input">
-        </div>
-        <div class="m-3">
-          <label for="" class="label">Ordenar por</label>
-          <div class="select is-normal is-fullwidth">
-            <select>
-              <option value="">Más reciente</option>
-              <option value="">Menos reciente</option>
-              <option value="">Mayor monto</option>
-              <option value="">Menor monto</option>
-              <option value="">A/Z</option>
-              <option value="">Z/A</option>
-            </select>
+          <div class="m-3">
+            <label for="" class="label">Desde</label>
+            <input type="date" class="input">
+          </div>
+          <div class="m-3">
+            <label for="" class="label">Ordenar por</label>
+            <div class="select is-normal is-fullwidth">
+              <select>
+                <option value="">Más reciente</option>
+                <option value="">Menos reciente</option>
+                <option value="">Mayor monto</option>
+                <option value="">Menor monto</option>
+                <option value="">A/Z</option>
+                <option value="">Z/A</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -152,7 +162,7 @@
   <!-- FIN SECCIÓN BALANCE -->
 
   <!-- ################# SECCIÓN CATEGORÍAS ############### -->
-  <section class="tile is-parent is-mobile m-6">
+  <section class="tile is-parent is-mobile m-6" id="categorias-seccion">
     <div class="tile is-child box">
       <p class="title has-text-weight-bold	is-size-4">Categorías</p>
       <label class="label">Nombre</label>
@@ -213,7 +223,7 @@
   <!-- FIN SECCIÓN BALANCE -->
 
   <!-- ################# SECCIÓN REPORTES ############### -->
-  <section class="m-6 tile is-parent is-mobile">
+  <section class="m-6 tile is-parent is-mobile" id="reportes-seccion">
     <div class="tile is-child box is-flex is-flex-direction-column">
       <span class="title has-text-weight-bold	is-size-4">Reportes</span>
       <figure class="image is-3by1">
@@ -225,12 +235,15 @@
       <p class="has-text-centered">Prueba agregando más operaciones</p>
     </div>
   </section>
+  <!-- FIN SECCIÓN REPORTES -->
 
 
 
 
 
 
+
+<script src="script.js"></script>
 </body>
 
 </html>

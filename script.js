@@ -1,3 +1,25 @@
+const $ = (id) => document.getElementById(id)
+
+const ocultarFiltros = () =>{
+    $('caja-filtros').classList.toggle('mostrar')
+    $('caja-filtros').classList.toggle('ocultar')
+    const modeStatus = document.getElementsByClassName('mostrar');
+    $('filter-text').textContent = modeStatus.length > 0 ? "Ocultar filtros" : "Mostrar filtros"
+}
+$('filter-text').addEventListener('click', ocultarFiltros)
+
+
+/////////////////////////
+/// INICIALIZACIONES ///
+///////////////////////
+
+const inicializar = () => {
+    ocultarFiltros()
+}
+window.onload = inicializar
+
+
+
 /*const chageToImage = () => {
     let sectionImagen = document.getElementById('section-imagen')
     sectionImagen.classList.remove('oculto')
